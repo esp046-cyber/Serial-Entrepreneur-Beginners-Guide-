@@ -1,0 +1,2772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 PH Serial Entrepreneur Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0038a8 0%, #ce1126 100%);
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 1%;
+            margin: 1%;
+        }
+
+        .container {
+            max-width: 100%;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0038a8 0%, #003d82 100%);
+            color: #fcd116;
+            padding: 12px 1%;
+            text-align: center;
+            border-bottom: 3px solid #ce1126;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            color: #fcd116;
+            margin-top: 4px;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 1%;
+        }
+
+        .section {
+            margin-bottom: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            background: #fff;
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #0038a8 0%, #0052cc 100%);
+            color: #ffffff;
+            padding: 10px 1%;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+
+        .section-header:active {
+            background: linear-gradient(135deg, #002d85 0%, #003d99 100%);
+        }
+
+        .section-header .icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .section.active .section-header .icon {
+            transform: rotate(180deg);
+        }
+
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background: #f8f9fa;
+        }
+
+        .section.active .section-content {
+            max-height: 5000px;
+        }
+
+        .section-body {
+            padding: 1%;
+            font-size: 0.88rem;
+            color: #2c3e50;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            border-left: 3px solid #fcd116;
+            padding: 8px 1%;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+
+        .alert {
+            background: #f8d7da;
+            border-left: 3px solid #ce1126;
+            padding: 8px 1%;
+            margin: 8px 0;
+            border-radius: 4px;
+            color: #721c24;
+        }
+
+        .success {
+            background: #d4edda;
+            border-left: 3px solid #28a745;
+            padding: 8px 1%;
+            margin: 8px 0;
+            border-radius: 4px;
+            color: #155724;
+        }
+
+        .info {
+            background: #d1ecf1;
+            border-left: 3px solid #0038a8;
+            padding: 8px 1%;
+            margin: 8px 0;
+            border-radius: 4px;
+            color: #0c5460;
+        }
+
+        ul, ol {
+            margin-left: 18px;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .step {
+            background: #e7f3ff;
+            border-left: 3px solid #0038a8;
+            padding: 8px 1%;
+            margin: 6px 0;
+            border-radius: 4px;
+        }
+
+        .step-number {
+            font-weight: 700;
+            color: #0038a8;
+            font-size: 0.95rem;
+        }
+
+        .resource-link {
+            background: #0038a8;
+            color: #fcd116;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .resource-link:active {
+            transform: scale(0.97);
+            box-shadow: 0 2px 8px rgba(0, 56, 168, 0.4);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin: 8px 0;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 10px 1%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-title {
+            font-weight: 700;
+            color: #0038a8;
+            margin-bottom: 6px;
+            font-size: 0.92rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #ce1126;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin: 2px;
+        }
+
+        .badge-success {
+            background: #28a745;
+        }
+
+        .badge-warning {
+            background: #ffc107;
+            color: #000;
+        }
+
+        .badge-info {
+            background: #17a2b8;
+        }
+
+        .timeline {
+            border-left: 2px solid #0038a8;
+            padding-left: 12px;
+            margin: 8px 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '●';
+            position: absolute;
+            left: -17px;
+            color: #ce1126;
+            font-size: 1.2rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            background: #fff;
+        }
+
+        th {
+            background: #0038a8;
+            color: #fcd116;
+            padding: 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 12px 1%;
+            font-size: 0.8rem;
+        }
+
+        .btn-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ce1126;
+            color: #fff;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(206, 17, 38, 0.4);
+            font-size: 1.4rem;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.2s;
+            z-index: 1000;
+        }
+
+        .btn-top.visible {
+            opacity: 1;
+        }
+
+        .btn-top:active {
+            transform: scale(0.95);
+        }
+
+        strong {
+            color: #0038a8;
+        }
+
+        .formula {
+            background: #e9ecef;
+            padding: 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            margin: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇵🇭 2026 Philippines Serial Entrepreneur Beginners Guide</h1>
+            <div class="subtitle">Your Complete Roadmap to Building Multiple Businesses</div>
+        </header>
+
+        <div class="content">
+            <!-- Section 1: What is Serial Entrepreneurship -->
+            <div class="section">
+                <div class="section-header">
+                    <span>📚 What is a Serial Entrepreneur?</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <p><strong>Serial entrepreneurs</strong> start multiple businesses over their lifetime, leveraging lessons from each venture to fuel the next.</p>
+                        
+                        <div class="highlight">
+                            <strong>Why Philippines in 2026?</strong><br>
+                            • GDP growth projected at 6.2%<br>
+                            • 85M+ internet users (highest in SEA)<br>
+                            • Government digitalization push<br>
+                            • ASEAN economic integration opportunities<br>
+                            • Young, tech-savvy population (median age 25)
+                        </div>
+
+                        <div class="success">
+                            <strong>Filipino Serial Entrepreneur Success Stories:</strong><br>
+                            • Edgar "Injap" Sia II (Mang Inasal, DoubleDragon)<br>
+                            • Aisa Mijeno (SALt Lamp, sustainable ventures)<br>
+                            • Dado & Tita Banatao (semiconductor, tech investments)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Philippine Business Landscape 2026 -->
+            <div class="section">
+                <div class="section-header">
+                    <span>🏙️ Philippine Business Landscape 2026</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #ce1126; margin-bottom: 8px;">High-Growth Sectors:</h3>
+                        
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-title">🌐 Digital Economy</div>
+                                • E-commerce (₱2.5T market)<br>
+                                • Fintech & digital payments<br>
+                                • Online education<br>
+                                • Digital marketing services
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">🌾 Agri-Tech</div>
+                                • Smart farming solutions<br>
+                                • Export-quality crops<br>
+                                • Farm-to-table platforms<br>
+                                • Agricultural machinery rental
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">💚 Sustainability</div>
+                                • Renewable energy<br>
+                                • Eco-friendly products<br>
+                                • Waste management<br>
+                                • Green construction
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">🏥 Healthcare</div>
+                                • Telemedicine platforms<br>
+                                • Mental health services<br>
+                                • Medical tourism<br>
+                                • Health supplements
+                            </div>
+                        </div>
+
+                        <div class="alert">
+                            <strong>Avoid Oversaturated Markets:</strong> Generic sari-sari stores, basic carinderias without unique value proposition, low-quality imported reselling without branding.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Legal Requirements -->
+            <div class="section">
+                <div class="section-header">
+                    <span>⚖️ Legal Requirements & Registration</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #0038a8; margin-bottom: 8px;">Business Structure Options:</h3>
+
+                        <div class="card" style="margin-bottom: 12px;">
+                            <div class="card-title">Sole Proprietorship</div>
+                            <span class="badge">EASIEST</span>
+                            <span class="badge">₱500-2,000</span><br>
+                            <strong>Pros:</strong> Simple, cheap, full control<br>
+                            <strong>Cons:</strong> Unlimited personal liability<br>
+                            <strong>Best for:</strong> First-time entrepreneurs, service businesses
+                        </div>
+
+                        <div class="card" style="margin-bottom: 12px;">
+                            <div class="card-title">Partnership</div>
+                            <span class="badge">₱3,000-5,000</span><br>
+                            <strong>Pros:</strong> Shared capital & expertise<br>
+                            <strong>Cons:</strong> Shared liability, potential conflicts<br>
+                            <strong>Best for:</strong> Multiple founders with complementary skills
+                        </div>
+
+                        <div class="card" style="margin-bottom: 12px;">
+                            <div class="card-title">Corporation</div>
+                            <span class="badge">SCALABLE</span>
+                            <span class="badge">₱15,000-30,000</span><br>
+                            <strong>Pros:</strong> Limited liability, easier funding, perpetual existence<br>
+                            <strong>Cons:</strong> Complex compliance, higher costs<br>
+                            <strong>Best for:</strong> Scaling businesses, investor-ready ventures
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Step-by-Step Registration (2026 Streamlined Process):</h3>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="step">
+                                    <div class="step-number">STEP 1: Business Name Verification</div>
+                                    <strong>DTI</strong> (Sole Prop) or <strong>SEC</strong> (Corp/Partnership)<br>
+                                    • Check name availability online<br>
+                                    • Reserve business name (₱200 DTI / ₱40 SEC)<br>
+                                    • Valid for 30 days<br>
+                                    <strong>Timeline:</strong> Same day (online)<br>
+                                    🔗 <a href="#" class="resource-link">bnrs.dti.gov.ph</a>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="step">
+                                    <div class="step-number">STEP 2: Business Registration</div>
+                                    <strong>DTI Registration</strong> (Sole Prop): ₱500<br>
+                                    <strong>SEC Registration</strong> (Corp): ₱1,000 filing + 1% of authorized capital<br>
+                                    • Submit requirements online via BRS<br>
+                                    • Receive Certificate of Registration<br>
+                                    <strong>Timeline:</strong> 1-3 days
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="step">
+                                    <div class="step-number">STEP 3: Barangay Clearance</div>
+                                    • Visit your barangay hall<br>
+                                    • Submit business registration certificate<br>
+                                    • Fee: ₱100-500 (varies per barangay)<br>
+                                    <strong>Timeline:</strong> Same day
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="step">
+                                    <div class="step-number">STEP 4: Mayor's Permit (Business Permit)</div>
+                                    • Apply at City/Municipal Hall<br>
+                                    • Submit: DTI/SEC cert, barangay clearance, lease contract<br>
+                                    • Fee: ₱1,000-10,000+ (based on gross sales)<br>
+                                    • 2026 UPDATE: Now available via Business One-Stop-Shop (BOSS)<br>
+                                    <strong>Timeline:</strong> 1-3 days
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="step">
+                                    <div class="step-number">STEP 5: BIR Registration (TIN & Taxes)</div>
+                                    • Register for Tax Identification Number (TIN)<br>
+                                    • Choose tax type: 8% (gross sales ≤₱3M) or graduated rates<br>
+                                    • Register books of accounts<br>
+                                    • Acquire Official Receipts/Invoices<br>
+                                    <strong>Timeline:</strong> 1-5 days<br>
+                                    🔗 <a href="#" class="resource-link">bir.gov.ph</a>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="step">
+                                    <div class="step-number">STEP 6: SSS, PhilHealth, Pag-IBIG</div>
+                                    • SSS: Employer registration (₱0)<br>
+                                    • PhilHealth: Business registration (₱0)<br>
+                                    • Pag-IBIG: Employer registration (₱0)<br>
+                                    • 2026: All can be done online<br>
+                                    <strong>Timeline:</strong> 1-2 days each
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="success">
+                            <strong>⚡ Fast Track Option (2026):</strong><br>
+                            Use the <strong>Business One-Stop-Shop (BOSS)</strong> system - complete registration in 1-3 days for ₱15,000-25,000 all-in (facilitated by accredited service providers).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Funding Your Ventures -->
+            <div class="section">
+                <div class="section-header">
+                    <span>💰 Funding Options for Filipino Entrepreneurs</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-title">Bootstrapping</div>
+                                <span class="badge">₱10K-100K</span><br>
+                                <strong>Sources:</strong><br>
+                                • Personal savings<br>
+                                • Family & friends<br>
+                                • Revenue from first business<br>
+                                <strong>Best for:</strong> Low-capital digital businesses, service-based
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">Government Loans</div>
+                                <span class="badge">₱100K-10M</span><br>
+                                <strong>DTI-Negosyo Centers:</strong> Up to ₱3M, 0% interest (first 6 months)<br>
+                                <strong>DOST-SETUP:</strong> Tech startups, up to ₱10M<br>
+                                <strong>DA-ACPC:</strong> Agri ventures, ₱500K-5M<br>
+                                <strong>Interest:</strong> 2.5%-7.5%
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">Microfinance</div>
+                                <span class="badge">₱5K-500K</span><br>
+                                <strong>CARD MRI:</strong> Women entrepreneurs<br>
+                                <strong>ASA Philippines:</strong> Quick release<br>
+                                <strong>TSKI:</strong> Rural businesses<br>
+                                <strong>Interest:</strong> 1.5%-3% monthly
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">Angel Investors</div>
+                                <span class="badge">₱1M-50M</span><br>
+                                <strong>Kickstart Ventures</strong><br>
+                                <strong>Foxmont Capital Partners</strong><br>
+                                <strong>Gobi Partners</strong><br>
+                                <strong>Equity:</strong> 10-30% typical
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">Venture Capital</div>
+                                <span class="badge">₱50M+</span><br>
+                                <strong>Ayala Corporation</strong><br>
+                                <strong>Vertex Ventures</strong><br>
+                                <strong>Openspace Ventures</strong><br>
+                                <strong>For:</strong> Scalable tech startups
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">Crowdfunding</div>
+                                <span class="badge">₱50K-5M</span><br>
+                                <strong>Cropital:</strong> Agriculture<br>
+                                <strong>SeedIn:</strong> General businesses<br>
+                                <strong>Kickstarter:</strong> Creative projects<br>
+                                <strong>Fee:</strong> 5-10% of funds raised
+                            </div>
+                        </div>
+
+                        <div class="highlight">
+                            <strong>💡 Serial Entrepreneur Funding Strategy:</strong><br>
+                            <strong>Business #1:</strong> Bootstrap (₱50K-200K)<br>
+                            <strong>Business #2:</strong> Profits from #1 + small government loan (₱500K-2M)<br>
+                            <strong>Business #3:</strong> Angel investment + retained earnings (₱5M-20M)<br>
+                            <strong>Scale multiple ventures:</strong> VC funding (₱50M+)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Business Ideas 2026 -->
+            <div class="section">
+                <div class="section-header">
+                    <span>💡 Top Business Ideas for 2026 Philippines</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #ce1126; margin-bottom: 8px;">Low Capital (₱10K-100K):</h3>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">Social Media Management Agency</div>
+                            <span class="badge">₱15K startup</span><br>
+                            <strong>What you need:</strong> Laptop, Canva Pro (₱550/mo), portfolio<br>
+                            <strong>Target:</strong> Local SMEs, restaurants, clinics<br>
+                            <strong>Revenue:</strong> ₱15K-50K per client/month<br>
+                            <strong>Scale:</strong> Hire VAs, specialize in industry (beauty, food, real estate)
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">Dropshipping PH Products</div>
+                            <span class="badge">₱20K startup</span><br>
+                            <strong>Platforms:</strong> Shopify + TikTok Shop + Lazada<br>
+                            <strong>Hot products 2026:</strong> Eco-products, health supplements, smart home devices<br>
+                            <strong>Suppliers:</strong> Local manufacturers (Bulacan, Laguna)<br>
+                            <strong>Margin:</strong> 30-50%
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">Online Tutoring Platform</div>
+                            <span class="badge">₱30K startup</span><br>
+                            <strong>Subjects:</strong> English (for Koreans/Japanese), Math, STEM<br>
+                            <strong>Platform:</strong> Zoom + simple website + FB ads<br>
+                            <strong>Rate:</strong> ₱300-800/hour<br>
+                            <strong>Scale:</strong> Recruit tutors, take 20-30% commission
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Medium Capital (₱100K-1M):</h3>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">Mobile Coffee Cart Franchise</div>
+                            <span class="badge">₱150K-300K</span><br>
+                            <strong>Location:</strong> Business districts, universities, events<br>
+                            <strong>Products:</strong> Specialty coffee, pastries<br>
+                            <strong>Daily revenue:</strong> ₱5K-15K<br>
+                            <strong>Payback:</strong> 6-12 months
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">Laundry Delivery Service</div>
+                            <span class="badge">₱400K-800K</span><br>
+                            <strong>Equipment:</strong> Commercial washer/dryer, delivery vehicle<br>
+                            <strong>App:</strong> Simple booking system (₱50K development)<br>
+                            <strong>Target:</strong> Condos, young professionals, students<br>
+                            <strong>Scale:</strong> Multiple branches, franchise model
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">Hydroponic Farm</div>
+                            <span class="badge">₱500K-1M</span><br>
+                            <strong>Size:</strong> 100-200 sqm<br>
+                            <strong>Crops:</strong> Lettuce, herbs, cherry tomatoes<br>
+                            <strong>Buyers:</strong> Hotels, restaurants, organic stores<br>
+                            <strong>ROI:</strong> 30-40% annually
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">High Capital (₱1M-10M+):</h3>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">Co-Working Space</div>
+                            <span class="badge">₱2M-5M</span><br>
+                            <strong>Location:</strong> Makati, BGC, Ortigas, Cebu IT Park<br>
+                            <strong>Revenue streams:</strong> Hot desks, private offices, meeting rooms, events<br>
+                            <strong>Monthly revenue:</strong> ₱300K-1M<br>
+                            <strong>Trend:</strong> Hybrid work culture expanding
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">EV Charging Station Network</div>
+                            <span class="badge">₱3M-10M</span><br>
+                            <strong>2026 boom:</strong> Government EV incentives, rising fuel costs<br>
+                            <strong>Locations:</strong> Malls, gas stations, parking lots<br>
+                            <strong>Partnership:</strong> Meralco, property developers<br>
+                            <strong>Revenue:</strong> Per kWh charging + advertising
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">Medical Tourism Facilitator</div>
+                            <span class="badge">₱2M-5M</span><br>
+                            <strong>Services:</strong> Coordinate treatments, accommodations, tours<br>
+                            <strong>Target:</strong> Middle East, US, Australia patients<br>
+                            <strong>PH advantage:</strong> Quality hospitals, English-speaking, affordable<br>
+                            <strong>Commission:</strong> 15-25% of medical package
+                        </div>
+
+                        <div class="alert">
+                            <strong>⚠️ Serial Entrepreneur Tip:</strong> Don't start similar businesses. Diversify across sectors to reduce risk. Example: Digital marketing agency + laundry franchise + small agri-tech investment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 6: Success Strategies -->
+            <div class="section">
+                <div class="section-header">
+                    <span>🎯 Keys to Serial Entrepreneur Success</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #0038a8; margin-bottom: 8px;">The Filipino Serial Entrepreneur Playbook:</h3>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">1. Start Lean, Scale Smart</div>
+                            • Launch MVP (Minimum Viable Product) in 30-60 days<br>
+                            • Test market with ₱10K-50K before big investment<br>
+                            • Use feedback to pivot quickly<br>
+                            • Scale only what's proven profitable
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">2. Build Systems, Not Jobs</div>
+                            • Document all processes (SOPs)<br>
+                            • Hire managers, not just workers<br>
+                            • Use automation tools (Zapier, Notion, Xero)<br>
+                            • Goal: Business runs without you in 6-12 months
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">3. Master Filipino Business Culture</div>
+                            • Build <em>pakikisama</em> with suppliers/partners<br>
+                            • Leverage <em>utang na loob</em> network (give first, receive later)<br>
+                            • Respect hierarchy but empower teams<br>
+                            • Balance formal contracts with relationship trust
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">4. Digital-First Mindset</div>
+                            • Online presence = credibility in 2026<br>
+                            • Invest in: Website, Google Business, social media<br>
+                            • Learn basics: SEO, FB Ads, email marketing<br>
+                            • Use data: Google Analytics, Meta Business Suite
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">5. Financial Discipline</div>
+                            • Separate personal & business accounts (DAY 1)<br>
+                            • Track every expense (use QuickBooks or Wave)<br>
+                            • Maintain 3-6 months emergency fund per business<br>
+                            • Reinvest 30-50% profits into growth
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">6. Network Strategically</div>
+                            • Join: PH Startup Summit, Founders Network PH, industry associations<br>
+                            • Attend: DTI SME events, chamber of commerce meetups<br>
+                            • Find mentor: Successful entrepreneurs 5-10 years ahead<br>
+                            • Give value first before asking for help
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">7. Know When to Exit</div>
+                            • Set exit goals before starting (IPO, acquisition, passive income)<br>
+                            • Build businesses others want to buy<br>
+                            • Typical serial entrepreneur cycle: 2-5 years per venture<br>
+                            • Exit options: Sell, franchise, hire CEO and become investor
+                        </div>
+
+                        <div class="success">
+                            <strong>📈 Timeline for Success:</strong><br>
+                            <strong>Year 1:</strong> Launch Business #1, achieve profitability<br>
+                            <strong>Year 2:</strong> Systematize #1, launch Business #2<br>
+                            <strong>Year 3:</strong> Scale #1 & #2, explore Business #3<br>
+                            <strong>Year 5:</strong> Portfolio of 3-5 businesses, consider exits<br>
+                            <strong>Year 10:</strong> Angel investor, mentor, industry leader
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Essential Tools & Resources -->
+            <div class="section">
+                <div class="section-header">
+                    <span>🛠️ Essential Tools & Resources</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #ce1126; margin-bottom: 8px;">Business Tools Stack 2026:</h3>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">📊 Accounting & Finance</div>
+                            <strong>QuickBooks</strong> - ₱1,500/mo (full accounting)<br>
+                            <strong>Wave</strong> - FREE (basic invoicing & expenses)<br>
+                            <strong>Xero</strong> - ₱1,200/mo (cloud-based)<br>
+                            <strong>BIR Relief eFPS</strong> - FREE (tax filing)
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">💳 Payment Processing</div>
+                            <strong>PayMongo</strong> - 3.5% + ₱15 per transaction<br>
+                            <strong>Maya Business</strong> - 2.8-3.5% + QR code payments<br>
+                            <strong>GCash for Business</strong> - 2.5% (largest user base)<br>
+                            <strong>PayPal</strong> - 4.4% + ₱15 (international)
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">📱 E-Commerce Platforms</div>
+                            <strong>Shopify</strong> - $29/mo (professional store)<br>
+                            <strong>WooCommerce</strong> - FREE plugin (for WordPress)<br>
+                            <strong>Lazada Seller</strong> - 5% commission + 2% payment fee<br>
+                            <strong>Shopee</strong> - 2-5% commission
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">📈 Marketing & Analytics</div>
+                            <strong>Google Analytics</strong> - FREE<br>
+                            <strong>Meta Business Suite</strong> - FREE (FB/IG management)<br>
+                            <strong>Canva Pro</strong> - ₱550/mo (design)<br>
+                            <strong>Mailchimp</strong> - FREE up to 500 subscribers
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">⚙️ Operations & Project Management</div>
+                            <strong>Notion</strong> - FREE (wiki, tasks, docs)<br>
+                            <strong>Trello</strong> - FREE (kanban boards)<br>
+                            <strong>Slack</strong> - FREE (team communication)<br>
+                            <strong>Google Workspace</strong> - ₱336/mo/user
+                        </div>
+
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-title">👥 HR & Payroll</div>
+                            <strong>Sprout Solutions</strong> - ₱60/employee/mo<br>
+                            <strong>Salarium</strong> - ₱50/employee/mo<br>
+                            <strong>PayrollHero</strong> - ₱80/employee/mo (with biometrics)
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Government & Support Resources:</h3>
+
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-title">DTI Negosyo Centers</div>
+                                <strong>Services:</strong><br>
+                                • Free business counseling<br>
+                                • Training programs<br>
+                                • Loan facilitation<br>
+                                • Networking events<br>
+                                📞 (02) 8751-3223
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">DOST-SETUP</div>
+                                <strong>For:</strong> Tech startups<br>
+                                <strong>Offers:</strong><br>
+                                • Grants up to ₱10M<br>
+                                • Incubation programs<br>
+                                • Mentorship<br>
+                                📞 (02) 8837-2071
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">QBO Innovation Hub</div>
+                                <strong>Free programs:</strong><br>
+                                • Startup bootcamps<br>
+                                • Investor matching<br>
+                                • Co-working space<br>
+                                🌐 ideaspace.ph/qbo
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">Go Negosyo</div>
+                                <strong>Initiatives:</strong><br>
+                                • Mentorship program<br>
+                                • Youth entrepreneurship<br>
+                                • Regional forums<br>
+                                🌐 gonegosyo.net
+                            </div>
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Learning Resources:</h3>
+
+                        <div class="highlight">
+                            <strong>📚 Recommended Books:</strong><br>
+                            • "The Lean Startup" - Eric Ries<br>
+                            • "The E-Myth Revisited" - Michael Gerber<br>
+                            • "Zero to One" - Peter Thiel<br>
+                            • "The Mom Test" - Rob Fitzpatrick (customer validation)
+                        </div>
+
+                        <div class="highlight">
+                            <strong>🎓 Online Courses (Filipino-focused):</strong><br>
+                            • <strong>Coursera:</strong> Business Foundations Specialization<br>
+                            • <strong>Udemy:</strong> "Filipino Entrepreneurs Guide" (₱599)<br>
+                            • <strong>SkillShare:</strong> Marketing & Design (₱599/mo)<br>
+                            • <strong>Google Digital Garage:</strong> FREE digital marketing
+                        </div>
+
+                        <div class="highlight">
+                            <strong>🎙️ Filipino Entrepreneur Podcasts:</strong><br>
+                            • Leadership Stack (Francis Kong)<br>
+                            • The Hustleshare (Dean Pax Lapid)<br>
+                            • Philippine Startup Stories<br>
+                            • Startup Stories PH (Spotify)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Common Pitfalls -->
+            <div class="section">
+                <div class="section-header">
+                    <span>⚠️ Common Pitfalls to Avoid</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <div class="alert" style="margin-bottom: 10px;">
+                            <strong>❌ Starting Without Market Research</strong><br>
+                            • Don't assume demand exists<br>
+                            • Survey 50-100 potential customers first<br>
+                            • Validate willingness to pay<br>
+                            • Study 3-5 competitors thoroughly
+                        </div>
+
+                        <div class="alert" style="margin-bottom: 10px;">
+                            <strong>❌ Perfectionism Paralysis</strong><br>
+                            • Don't wait for "perfect" conditions<br>
+                            • Launch with 80% ready product<br>
+                            • Improve based on customer feedback<br>
+                            • Filipino saying: "Walang perpekto, may pagkakataon lang"
+                        </div>
+
+                        <div class="alert" style="margin-bottom: 10px;">
+                            <strong>❌ Underpricing Due to "Hiya"</strong><br>
+                            • Don't undervalue your work to be "humble"<br>
+                            • Price based on value delivered, not hours<br>
+                            • Study competitor pricing<br>
+                            • Remember: Cheap = not trustworthy to many Filipinos
+                        </div>
+
+                        <div class="alert" style="margin-bottom: 10px;">
+                            <strong>❌ Hiring Family/Friends Without Contracts</strong><br>
+                            • Always have written agreements, even with relatives<br>
+                            • Set clear roles, responsibilities, compensation<br>
+                            • "Utang na loob" shouldn't mean free labor<br>
+                            • Protect relationships by being professional
+                        </div>
+
+                        <div class="alert" style="margin-bottom: 10px;">
+                            <strong>❌ Ignoring Taxes & Compliance</strong><br>
+                            • BIR penalties are severe (25-50% surcharge + interest)<br>
+                            • File quarterly returns even with zero income<br>
+                            • Keep all receipts for 3 years minimum<br>
+                            • Hire bookkeeper (₱5K-10K/mo) from day one
+                        </div>
+
+                        <div class="alert" style="margin-bottom: 10px;">
+                            <strong>❌ Mixing Personal & Business Finances</strong><br>
+                            • Separate bank accounts immediately<br>
+                            • Pay yourself a salary, don't just withdraw randomly<br>
+                            • Track personal loans to business separately<br>
+                            • Use business credit card for expenses
+                        </div>
+
+                        <div class="alert" style="margin-bottom: 10px;">
+                            <strong>❌ No Written Contracts with Partners</strong><br>
+                            • 60%+ of PH partnerships fail due to unclear agreements<br>
+                            • Define: Equity split, roles, decision-making, exit terms<br>
+                            • Use lawyers for ₱10K-30K (worth it!)<br>
+                            • Review annually as business evolves
+                        </div>
+
+                        <div class="alert" style="margin-bottom: 10px;">
+                            <strong>❌ Copying Foreign Models Without Adaptation</strong><br>
+                            • What works in US/SG may not work in PH<br>
+                            • Consider: purchasing power, internet speeds, payment preferences<br>
+                            • Filipinos prefer: Cash-on-delivery, installment, personal service<br>
+                            • Localize your approach
+                        </div>
+
+                        <div class="success">
+                            <strong>✅ The Serial Entrepreneur Advantage:</strong><br>
+                            Learn from mistakes in Business #1, don't repeat in Business #2. Each venture should have 30-50% fewer errors than the last. By Business #3, you should have a proven playbook.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW SECTION 9: Digital Marketing Playbook -->
+            <div class="section">
+                <div class="section-header">
+                    <span>📱 Digital Marketing Playbook 2026</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #ce1126; margin-bottom: 8px;">Facebook & Instagram Ads (Meta Platform)</h3>
+
+                        <div class="success">
+                            <strong>🎯 Why Meta is #1 for PH Businesses:</strong><br>
+                            • 89M Filipinos on Facebook (82% of population)<br>
+                            • Average 4.5 hours/day screen time<br>
+                            • Best ROI for local businesses (₱1 = ₱3-10 return)<br>
+                            • Highly targeted: location, age, interests, behavior
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">Setup: Meta Business Suite (FREE)</div>
+                            <strong>Step 1:</strong> Create Facebook Business Page<br>
+                            <strong>Step 2:</strong> Link Instagram account<br>
+                            <strong>Step 3:</strong> Set up Meta Business Manager<br>
+                            <strong>Step 4:</strong> Add payment method (GCash, Maya, Credit Card)<br>
+                            <strong>Step 5:</strong> Install Meta Pixel on website (tracks conversions)
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 12px 0 8px 0;">Campaign Types & Budgets:</h3>
+
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Goal</th>
+                                    <th>Campaign Type</th>
+                                    <th>Daily Budget</th>
+                                    <th>Expected Results</th>
+                                </tr>
+                                <tr>
+                                    <td>Brand Awareness</td>
+                                    <td>Reach</td>
+                                    <td>₱200-500</td>
+                                    <td>5K-15K impressions</td>
+                                </tr>
+                                <tr>
+                                    <td>Traffic to Website</td>
+                                    <td>Traffic</td>
+                                    <td>₱300-800</td>
+                                    <td>100-300 clicks</td>
+                                </tr>
+                                <tr>
+                                    <td>Get Leads</td>
+                                    <td>Lead Generation</td>
+                                    <td>₱500-1,500</td>
+                                    <td>20-50 leads</td>
+                                </tr>
+                                <tr>
+                                    <td>Online Sales</td>
+                                    <td>Conversions</td>
+                                    <td>₱800-2,500</td>
+                                    <td>5-20 purchases</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="highlight">
+                            <strong>💰 Beginner Budget Formula:</strong><br>
+                            <div class="formula">Monthly Ad Budget = Target Revenue × 5-10%</div>
+                            Example: Want ₱100K/month revenue? → Allocate ₱5K-10K/month for ads
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">🎨 Ad Creative Best Practices (Filipino Market)</div>
+                            <strong>Visuals:</strong><br>
+                            • Use bright, high-contrast colors<br>
+                            • Show real Filipino faces (not stock photos)<br>
+                            • Include clear price + discount if applicable<br>
+                            • Square (1:1) or vertical (4:5) format works best<br>
+                            <br>
+                            <strong>Copy (Text):</strong><br>
+                            • Mix English & Tagalog (Taglish = best engagement)<br>
+                            • Start with question or problem<br>
+                            • Use emojis (Filipinos love them!)<br>
+                            • Include social proof: "5,000+ satisfied customers"<br>
+                            • Clear CTA: "Order Now", "Message Us", "Learn More"<br>
+                            <br>
+                            <strong>Winning Ad Formats:</strong><br>
+                            • Video (15-30 seconds) - 3x better than images<br>
+                            • Carousel (multiple products)<br>
+                            • Before/After transformations<br>
+                            • Customer testimonials with photos
+                        </div>
+
+                        <div class="alert">
+                            <strong>🚫 Common Filipino FB Ad Mistakes:</strong><br>
+                            • Too much text on image (Meta limits this)<br>
+                            • Targeting too broad (all of Philippines = wasted money)<br>
+                            • Not testing multiple ad variations<br>
+                            • Ignoring comments (respond within 1 hour!)<br>
+                            • Running ads without proper landing page
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">TikTok Marketing Strategy</h3>
+
+                        <div class="info">
+                            <strong>📊 TikTok PH Stats 2026:</strong><br>
+                            • 55M+ active users (fastest growing platform)<br>
+                            • 18-34 age group = 68% of users<br>
+                            • Average 95 minutes/day usage<br>
+                            • Best for: Fashion, beauty, food, tech products
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">TikTok Shop Setup (₱0 to start!)</div>
+                            <strong>Requirements:</strong><br>
+                            • DTI/SEC registration<br>
+                            • Valid ID<br>
+                            • Bank account or e-wallet<br>
+                            • Product photos/videos<br>
+                            <br>
+                            <strong>Commission:</strong> 2% transaction fee (cheaper than Lazada/Shopee!)<br>
+                            <strong>Shipping:</strong> Integrated with J&T, Ninjavan, Flash Express
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">🎬 Viral TikTok Content Formula</div>
+                            <strong>Hook (First 3 seconds):</strong><br>
+                            • "Wait, you can earn ₱50K/month doing THIS?"<br>
+                            • "POV: You bought this and..."<br>
+                            • Shocking visual or statement<br>
+                            <br>
+                            <strong>Content Types That Work in PH:</strong><br>
+                            • Behind-the-scenes of business<br>
+                            • Customer reactions/unboxing<br>
+                            • Day in the life (DITL) videos<br>
+                            • Trending sounds + product integration<br>
+                            • Educational: "3 mistakes to avoid when..."<br>
+                            <br>
+                            <strong>Posting Strategy:</strong><br>
+                            • Post 1-3x daily (consistency > perfection)<br>
+                            • Best times: 6-9am, 12-2pm, 6-10pm<br>
+                            • Use 3-5 relevant hashtags<br>
+                            • Engage with comments immediately
+                        </div>
+
+                        <div class="highlight">
+                            <strong>💡 TikTok Ads vs Organic:</strong><br>
+                            <strong>Organic TikTok:</strong> FREE, can go viral, builds community<br>
+                            <strong>TikTok Ads:</strong> ₱500/day minimum, faster results, precise targeting<br>
+                            <strong>Best approach:</strong> Start organic, scale with ads once proven
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Google Ads for Local Business</h3>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">🔍 When to Use Google Ads</div>
+                            <strong>Best for:</strong><br>
+                            • High-intent searches: "plumber near me", "buy laptop Manila"<br>
+                            • Service businesses: lawyers, doctors, contractors<br>
+                            • E-commerce with specific products<br>
+                            • Local businesses wanting foot traffic<br>
+                            <br>
+                            <strong>Not ideal for:</strong><br>
+                            • Brand new products no one searches for<br>
+                            • Very low budgets (₱500/day minimum recommended)
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">Google Ads Campaign Types</div>
+                            <strong>1. Search Ads</strong> (Text ads on Google search)<br>
+                            • Budget: ₱500-2,000/day<br>
+                            • CPC: ₱5-50 per click (depends on keyword)<br>
+                            • Best for: Immediate sales<br>
+                            <br>
+                            <strong>2. Google Business Profile</strong> (FREE!)<br>
+                            • Shows in "near me" searches<br>
+                            • Display hours, photos, reviews<br>
+                            • Must-have for all local businesses<br>
+                            <br>
+                            <strong>3. Display Ads</strong> (Banner ads on websites)<br>
+                            • Budget: ₱300-1,000/day<br>
+                            • Cheaper clicks, lower intent<br>
+                            • Good for retargeting<br>
+                            <br>
+                            <strong>4. YouTube Ads</strong><br>
+                            • Video ads before videos<br>
+                            • Budget: ₱200-800/day<br>
+                            • Skippable = only pay if watched 30 seconds
+                        </div>
+
+                        <div class="success">
+                            <strong>✅ Google Ads Starter Strategy (₱20K/month budget):</strong><br>
+                            • ₱10K - Search ads (high-intent keywords)<br>
+                            • ₱5K - Google Business Profile promotion<br>
+                            • ₱3K - Retargeting display ads<br>
+                            • ₱2K - Testing & optimization
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Email Marketing (Most Underrated!)</h3>
+
+                        <div class="info">
+                            <strong>Why Email Still Works in 2026:</strong><br>
+                            • ROI: ₱42 return for every ₱1 spent (average)<br>
+                            • You OWN the list (not Facebook's algorithm)<br>
+                            • Filipinos check email daily for work/shopping<br>
+                            • Best for repeat purchases & loyalty
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">📧 Email Campaign Types</div>
+                            <strong>1. Welcome Series</strong> (Automated)<br>
+                            • Email 1: Welcome + thank you<br>
+                            • Email 2: Share your story<br>
+                            • Email 3: Best sellers + discount<br>
+                            <br>
+                            <strong>2. Promotional</strong><br>
+                            • Flash sales<br>
+                            • New product launches<br>
+                            • Seasonal campaigns (Christmas, Payday)<br>
+                            <br>
+                            <strong>3. Educational/Value</strong><br>
+                            • Tips, guides, tutorials<br>
+                            • Industry news<br>
+                            • Behind-the-scenes<br>
+                            <br>
+                            <strong>4. Re-engagement</strong><br>
+                            • Win back inactive customers<br>
+                            • "We miss you" + special offer
+                        </div>
+
+                        <div class="highlight">
+                            <strong>📊 Email Marketing KPIs to Track:</strong><br>
+                            • Open Rate: 20-30% = good<br>
+                            • Click Rate: 2-5% = good<br>
+                            • Conversion Rate: 1-3% = good<br>
+                            • Unsubscribe Rate: <1% = healthy
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">SEO for Philippine Businesses</h3>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">Local SEO Essentials (FREE Traffic!)</div>
+                            <strong>1. Google Business Profile</strong><br>
+                            • Claim and verify your business<br>
+                            • Add photos (products,店interior, team)<br>
+                            • Get reviews (minimum 10 to start)<br>
+                            • Post weekly updates<br>
+                            <br>
+                            <strong>2. On-Page SEO</strong><br>
+                            • Use Filipino keywords: "saan bumili ng laptop Manila"<br>
+                            • Include location in titles: "Best Coffee Shop BGC"<br>
+                            • Mobile-friendly website (85% PH traffic is mobile!)<br>
+                            • Fast loading speed (3 seconds max)<br>
+                            <br>
+                            <strong>3. Content Marketing</strong><br>
+                            • Blog posts answering customer questions<br>
+                            • "How to" guides related to your product<br>
+                            • Comparison articles<br>
+                            • Local area guides<br>
+                            <br>
+                            <strong>4. Link Building</strong><br>
+                            • Get listed in local directories<br>
+                            • Partner with complementary businesses<br>
+                            • Guest post on local blogs<br>
+                            • Sponsor local events
+                        </div>
+
+                        <div class="success">
+                            <strong>🎯 Complete Digital Marketing Monthly Plan (₱30K budget):</strong><br>
+                            • ₱10K - Facebook/Instagram Ads<br>
+                            • ₱8K - TikTok content creation (hire creator or DIY)<br>
+                            • ₱5K - Google Ads<br>
+                            • ₱3K - Tools (Canva Pro, Mailchimp, analytics)<br>
+                            • ₱2K - Influencer collaborations (micro-influencers)<br>
+                            • ₱2K - Testing new platforms<br>
+                            <br>
+                            <strong>Expected ROI:</strong> ₱90K-150K revenue (3-5x return)
+                        </div>
+
+                        <div class="alert">
+                            <strong>⚠️ Biggest Digital Marketing Mistake:</strong><br>
+                            Trying to be on ALL platforms at once. Master ONE first (usually Facebook for PH businesses), get profitable, THEN expand to others.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW SECTION 10: Financial Management Deep Dive -->
+            <div class="section">
+                <div class="section-header">
+                    <span>💰 Financial Management Mastery</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #ce1126; margin-bottom: 8px;">Cash Flow Management (The #1 Killer of Businesses)</h3>
+
+                        <div class="alert">
+                            <strong>⚠️ Critical Truth:</strong> 82% of Philippine small businesses fail due to poor cash flow management, NOT lack of profit. You can be profitable on paper and still go bankrupt!
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">Understanding Cash Flow</div>
+                            <div class="formula">
+                                Cash Flow = Cash In (收入) - Cash Out (支出)
+                            </div>
+                            <strong>Cash In:</strong> Customer payments, loans, investments<br>
+                            <strong>Cash Out:</strong> Suppliers, salaries, rent, utilities, taxes<br>
+                            <br>
+                            <strong>The Problem:</strong> You might sell ₱100K worth of products, but if customers pay in 30-60 days while you pay suppliers in 7 days, you're cash flow negative!
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">📊 Weekly Cash Flow Tracking (Do This Every Monday!)</div>
+                            <strong>Simple Spreadsheet Template:</strong><br>
+                            <br>
+                            <div class="table-container">
+                                <table>
+                                    <tr>
+                                        <th>Week</th>
+                                        <th>Opening Balance</th>
+                                        <th>Cash In</th>
+                                        <th>Cash Out</th>
+                                        <th>Closing Balance</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Week 1</td>
+                                        <td>₱50,000</td>
+                                        <td>₱85,000</td>
+                                        <td>₱60,000</td>
+                                        <td>₱75,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Week 2</td>
+                                        <td>₱75,000</td>
+                                        <td>₱90,000</td>
+                                        <td>₱80,000</td>
+                                        <td>₱85,000</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <br>
+                            <strong>Action Items:</strong><br>
+                            • If closing balance drops 2 weeks in row → RED FLAG<br>
+                            • Maintain minimum 3 months operating expenses in bank<br>
+                            • Project next 12 weeks to anticipate problems
+                        </div>
+
+                        <div class="success">
+                            <strong>✅ Filipino Cash Flow Strategies:</strong><br>
+                            <strong>1. Get Paid Faster</strong><br>
+                            • Offer 5-10% discount for cash/immediate payment<br>
+                            • Accept GCash/Maya (instant settlement)<br>
+                            • Require 50% deposit for custom orders<br>
+                            • Bill immediately, follow up in 3 days<br>
+                            <br>
+                            <strong>2. Pay Slower (Legally!)</strong><br>
+                            • Negotiate 30-day terms with suppliers<br>
+                            • Use credit cards (30-45 day float)<br>
+                            • Time large payments after collections<br>
+                            <br>
+                            <strong>3. Reduce Cash Needs</strong><br>
+                            • Consignment with suppliers (pay only when sold)<br>
+                            • Dropshipping model<br>
+                            • Pre-sell products before ordering inventory<br>
+                            • Rent equipment vs buying
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Pricing Strategies (Stop Underpricing!)</h3>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">🔢 Cost-Plus Pricing (Beginner Method)</div>
+                            <div class="formula">
+                                Selling Price = (Direct Costs + Overhead) ÷ (1 - Desired Profit %)
+                            </div>
+                            <strong>Example: Selling Cakes</strong><br>
+                            • Direct costs: ₱150 (ingredients, packaging)<br>
+                            • Overhead per unit: ₱50 (rent, utilities, labor)<br>
+                            • Total cost: ₱200<br>
+                            • Desired profit: 40%<br>
+                            • Price = ₱200 ÷ (1 - 0.40) = ₱200 ÷ 0.60 = ₱333<br>
+                            <br>
+                            <span class="badge-success badge">Sell at ₱350</span> (round up for psychology)
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">💎 Value-Based Pricing (Advanced, Higher Margins)</div>
+                            <strong>Price based on customer value, NOT your costs!</strong><br>
+                            <br>
+                            <strong>Questions to ask:</strong><br>
+                            • What problem are you solving?<br>
+                            • How much is that problem costing them?<br>
+                            • What would they pay for a solution?<br>
+                            <br>
+                            <strong>Example: IT Support Service</strong><br>
+                            • Your cost: ₱500/hour (salary, tools)<br>
+                            • Cost-plus price: ₱800/hour<br>
+                            • BUT: Client loses ₱50K if system is down<br>
+                            • VALUE price: ₱2,500-3,500/hour ✓<br>
+                            <br>
+                            <strong>Works best for:</strong> Services, B2B, unique products, premium brands
+                        </div>
+
+                        <div class="highlight">
+                            <strong>🧠 Psychological Pricing for Filipino Market:</strong><br>
+                            • ₱99, ₱499, ₱999 (perceived as cheaper than ₱100, ₱500, ₱1,000)<br>
+                            • Bundle pricing: "₱1,200 for 3" vs "₱450 each"<br>
+                            • Anchor high: Show ₱2,000 option first, then ₱1,200 feels like a deal<br>
+                            • Even numbers (₱500, ₱1,000) = quality, premium<br>
+                            • Odd numbers (₱499, ₱799) = bargain, sale
+                        </div>
+
+                        <div class="alert">
+                            <strong>🚫 Pricing Mistakes Filipinos Make:</strong><br>
+                            • Competing only on price (race to the bottom)<br>
+                            • Not raising prices for 2-3 years (inflation eats profit!)<br>
+                            • Giving too many discounts to friends/family<br>
+                            • Pricing same as competitors without differentiation<br>
+                            • Not tracking if profitable after ALL costs
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Philippine Tax Optimization (Legal!)</h3>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">📋 Tax Options for Small Businesses (2026)</div>
+                            <strong>Option 1: 8% Income Tax</strong><br>
+                            <span class="badge-success badge">BEST FOR MOST</span><br>
+                            • Gross sales ≤ ₱3,000,000/year<br>
+                            • No itemized deductions allowed<br>
+                            • Simple computation<br>
+                            • Example: ₱2M gross sales × 8% = ₱160K tax<br>
+                            <br>
+                            <strong>Option 2: Graduated Income Tax</strong><br>
+                            • Can deduct business expenses<br>
+                            • Better if high operating costs (40%+ of revenue)<br>
+                            • More paperwork, receipts required<br>
+                            • Rates: 0% up to ₱250K, then 20-35%<br>
+                            <br>
+                            <strong>Which to choose?</strong><br>
+                            • Low expenses business (digital, services) → 8%<br>
+                            • High expenses business (retail, manufacturing) → Graduated
+                        </div>
+
+                        <div class="success">
+                            <strong>✅ Legal Tax Deductions (Graduated Tax):</strong><br>
+                            • Rent (office, store, warehouse)<br>
+                            • Employee salaries + benefits<br>
+                            • Utilities (electricity, water, internet)<br>
+                            • Office supplies & equipment<br>
+                            • Advertising & marketing<br>
+                            • Professional fees (lawyer, accountant)<br>
+                            • Vehicle expenses (if business use)<br>
+                            • Business meals (50% deductible)<br>
+                            • Training & seminars<br>
+                            • Depreciation of assets<br>
+                            <br>
+                            <strong>Keep receipts for 3 years minimum!</strong>
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">Quarterly Tax Filing Calendar</div>
+                            <strong>Q1:</strong> January-March → File by April 15<br>
+                            <strong>Q2:</strong> April-June → File by July 15<br>
+                            <strong>Q3:</strong> July-September → File by October 15<br>
+                            <strong>Q4:</strong> October-December → File by January 15<br>
+                            <br>
+                            <strong>Annual ITR:</strong> Due April 15 of following year<br>
+                            <br>
+                            <span class="badge-warning badge">Set reminders!</span> Late filing = 25% surcharge + 20% interest/year
+                        </div>
+
+                        <div class="info">
+                            <strong>💡 Tax Saving Tip:</strong><br>
+                            Register spouse or family member as employee (legitimate work only!). You can deduct their salary + benefits, they file separate tax return with lower bracket. Legal if they actually work in business.
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Financial KPIs to Track Monthly</h3>
+
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Formula</th>
+                                    <th>Good Target</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gross Profit Margin</strong></td>
+                                    <td>(Revenue - COGS) ÷ Revenue × 100</td>
+                                    <td>40-60%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Net Profit Margin</strong></td>
+                                    <td>Net Profit ÷ Revenue × 100</td>
+                                    <td>10-20%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Break-Even Point</strong></td>
+                                    <td>Fixed Costs ÷ Gross Margin %</td>
+                                    <td>Know your number!</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Customer Acquisition Cost</strong></td>
+                                    <td>Marketing Spend ÷ New Customers</td>
+                                    <td>< ₱500 for small biz</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Inventory Turnover</strong></td>
+                                    <td>COGS ÷ Average Inventory</td>
+                                    <td>6-12× per year</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Debt-to-Equity</strong></td>
+                                    <td>Total Debt ÷ Owner's Equity</td>
+                                    <td>< 1.0 (conservative)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="highlight">
+                            <strong>📊 Simple Financial Dashboard (Track in Google Sheets):</strong><br>
+                            <strong>Daily:</strong> Cash position, sales<br>
+                            <strong>Weekly:</strong> Cash flow, receivables aging<br>
+                            <strong>Monthly:</strong> P&L, all KPIs above, budget vs actual<br>
+                            <strong>Quarterly:</strong> Financial statements, tax filing<br>
+                            <strong>Yearly:</strong> Annual planning, tax optimization review
+                        </div>
+
+                        <div class="success">
+                            <strong>🎯 Financial Management Action Plan:</strong><br>
+                            <strong>Week 1:</strong> Open separate business bank account<br>
+                            <strong>Week 2:</strong> Set up accounting system (Wave, QuickBooks)<br>
+                            <strong>Week 3:</strong> Create cash flow projection (12 weeks)<br>
+                            <strong>Week 4:</strong> Calculate break-even, review pricing<br>
+                            <strong>Ongoing:</strong> Track daily sales, review monthly P&L<br>
+                            <br>
+                            <strong>Hire bookkeeper when:</strong> Revenue > ₱100K/month OR you're spending 5+ hours/week on finances
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW SECTION 11: Hiring & Philippine Labor Laws -->
+            <div class="section">
+                <div class="section-header">
+                    <span>👥 Hiring & Philippine Labor Laws 101</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #ce1126; margin-bottom: 8px;">When to Hire Your First Employee</h3>
+
+                        <div class="info">
+                            <strong>🎯 Hire when you hit ANY of these:</strong><br>
+                            • You're working 70+ hours/week consistently<br>
+                            • Turning down customers due to capacity<br>
+                            • Revenue > ₱200K/month and stable<br>
+                            • Spending time on ₱200/hour tasks (admin, basic tasks)<br>
+                            • Want to scale but you're the bottleneck
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">💼 Employment Types in Philippines</div>
+                            <strong>1. Regular Employee</strong><br>
+                            <span class="badge">MOST PROTECTIONS</span><br>
+                            • After 6 months probation → permanent<br>
+                            • Can only be fired for "just cause"<br>
+                            • Entitled to all benefits (13th month, leaves, SSS, etc.)<br>
+                            • Most expensive but stable workforce<br>
+                            <br>
+                            <strong>2. Project-Based</strong><br>
+                            • Fixed duration (e.g., 3 months project)<br>
+                            • Must be for specific project/task<br>
+                            • Entitled to pro-rated 13th month<br>
+                            • Contract ends when project ends<br>
+                            <br>
+                            <strong>3. Contractual (through Agency)</strong><br>
+                            • Hired through manpower agency<br>
+                            • Agency handles payroll, benefits<br>
+                            • More expensive (agency fee 10-20%)<br>
+                            • Easier to terminate<br>
+                            <br>
+                            <strong>4. Part-Time</strong><br>
+                            • < 8 hours/day or < 40 hours/week<br>
+                            • Pro-rated benefits<br>
+                            • Still entitled to SSS, PhilHealth, Pag-IBIG<br>
+                            <br>
+                            <strong>5. Independent Contractor</strong><br>
+                            <span class="badge-warning badge">CAREFUL!</span><br>
+                            • NOT an employee (no labor law protections)<br>
+                            • Must have own tools, control over work<br>
+                            • Can work for multiple clients<br>
+                            • No benefits required<br>
+                            • DOLE can reclassify if employee-like relationship
+                        </div>
+
+                        <div class="alert">
+                            <strong>⚠️ Critical Warning:</strong> Many PH businesses illegally classify employees as "contractors" to avoid benefits. If DOLE investigates and finds employee relationship (fixed hours, you provide tools, exclusive, supervised), you'll pay BACKPAY for all benefits + penalties!
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Minimum Wage by Region (2026)</h3>
+
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Region</th>
+                                    <th>Daily Minimum (NCR)</th>
+                                    <th>Monthly Minimum</th>
+                                </tr>
+                                <tr>
+                                    <td>Metro Manila (NCR)</td>
+                                    <td>₱645</td>
+                                    <td>₱16,770</td>
+                                </tr>
+                                <tr>
+                                    <td>Region 4A (CALABARZON)</td>
+                                    <td>₱520-570</td>
+                                    <td>₱13,520-14,820</td>
+                                </tr>
+                                <tr>
+                                    <td>Region 7 (Cebu)</td>
+                                    <td>₱435-485</td>
+                                    <td>₱11,310-12,610</td>
+                                </tr>
+                                <tr>
+                                    <td>Region 11 (Davao)</td>
+                                    <td>₱443</td>
+                                    <td>₱11,518</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="info">
+                            <strong>Note:</strong> These are MINIMUMS. Most businesses pay 20-50% above minimum for skilled workers to attract talent.
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Mandatory Benefits (You MUST Provide)</h3>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">1. 13th Month Pay</div>
+                            <strong>What:</strong> Additional month salary paid in December<br>
+                            <strong>Computation:</strong> Total basic salary for the year ÷ 12<br>
+                            <strong>Deadline:</strong> December 24<br>
+                            <strong>Who:</strong> ALL employees (even those who worked <1 year, pro-rated)<br>
+                            <br>
+                            <strong>Example:</strong><br>
+                            • Monthly salary: ₱18,000<br>
+                            • Started: July 1 (worked 6 months)<br>
+                            • 13th month: (₱18,000 × 6) ÷ 12 = ₱9,000
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">2. SSS (Social Security System)</div>
+                            <strong>Purpose:</strong> Retirement, disability, death, maternity benefits<br>
+                            <strong>Contribution:</strong> 14% of monthly salary<br>
+                            • Employer: 9.5%<br>
+                            • Employee: 4.5%<br>
+                            <strong>Max salary base:</strong> ₱30,000<br>
+                            <strong>Due:</strong> Every month by 10th<br>
+                            <br>
+                            <strong>Example (₱20,000 salary):</strong><br>
+                            • Employer pays: ₱1,900<br>
+                            • Employee pays: ₱900 (deducted from salary)<br>
+                            • Total to SSS: ₱2,800/month
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">3. PhilHealth</div>
+                            <strong>Purpose:</strong> Health insurance<br>
+                            <strong>Contribution:</strong> 5% of monthly salary (shared 50-50)<br>
+                            • Employer: 2.5%<br>
+                            • Employee: 2.5%<br>
+                            <strong>Due:</strong> Monthly by 10th<br>
+                            <br>
+                            <strong>Example (₱20,000 salary):</strong><br>
+                            • Employer pays: ₱500<br>
+                            • Employee pays: ₱500<br>
+                            • Total: ₱1,000/month
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">4. Pag-IBIG (HDMF)</div>
+                            <strong>Purpose:</strong> Housing fund, savings, loans<br>
+                            <strong>Contribution:</strong><br>
+                            • Employee: 1-2% of monthly salary<br>
+                            • Employer: 2% of monthly salary<br>
+                            <strong>Due:</strong> Monthly by 10th<br>
+                            <br>
+                            <strong>Example (₱20,000 salary):</strong><br>
+                            • Employer pays: ₱400<br>
+                            • Employee pays: ₱200-400<br>
+                            • Total: ₱600-800/month
+                        </div>
+
+                        <div class="highlight">
+                            <strong>💰 TRUE COST OF HIRING (₱20,000 salary):</strong><br>
+                            • Basic Salary: ₱20,000<br>
+                            • SSS (employer): ₱1,900<br>
+                            • PhilHealth (employer): ₱500<br>
+                            • Pag-IBIG (employer): ₱400<br>
+                            • 13th month (monthly provision): ₱1,667<br>
+                            <div class="formula">
+                                TOTAL MONTHLY COST = ₱24,467 (22% above salary!)
+                            </div>
+                            <strong>Plus:</strong> Leaves, overtime, equipment, training, etc.
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Required Leaves</h3>
+
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Leave Type</th>
+                                    <th>Days/Year</th>
+                                    <th>Notes</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>Service Incentive Leave</strong></td>
+                                    <td>5 days</td>
+                                    <td>After 1 year, convertible to cash if unused</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Maternity Leave</strong></td>
+                                    <td>105 days</td>
+                                    <td>For female employees (SSS reimburses)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Paternity Leave</strong></td>
+                                    <td>7 days</td>
+                                    <td>For married male employees</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Parental Leave (Solo Parent)</strong></td>
+                                    <td>7 days</td>
+                                    <td>With Solo Parent ID</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>VAWC Leave</strong></td>
+                                    <td>10 days</td>
+                                    <td>For victims of violence</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="success">
+                            <strong>💡 Smart Leave Policy:</strong><br>
+                            Offer 10-15 days combined Vacation/Sick Leave (beyond the required 5 SIL). This:<br>
+                            • Attracts better talent<br>
+                            • Reduces burnout<br>
+                            • Shows you value work-life balance<br>
+                            • Costs less than turnover/hiring
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Overtime & Holiday Pay Rules</h3>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">⏰ Overtime Computation</div>
+                            <strong>Regular Days:</strong><br>
+                            • First 8 hours = regular pay<br>
+                            • Hour 9+ = +25% (125% total)<br>
+                            • Hour 9+ on rest day/holiday = +30% (130% total)<br>
+                            <br>
+                            <strong>Example:</strong><br>
+                            • Hourly rate: ₱90 (₱18,000 ÷ 200 hours/month ÷ 8)<br>
+                            • 2 hours overtime: ₱90 × 1.25 × 2 = ₱225
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">🎉 Holiday Pay Rates (2026)</div>
+                            <strong>Regular Holiday (work):</strong> +200% (daily rate × 2)<br>
+                            <strong>Regular Holiday (no work):</strong> +100% (still get paid!)<br>
+                            <strong>Special Non-Working Day (work):</strong> +30%<br>
+                            <strong>Special Non-Working Day (no work):</strong> No pay<br>
+                            <br>
+                            <strong>2026 Regular Holidays:</strong><br>
+                            • Jan 1 - New Year<br>
+                            • April 9 - Araw ng Kagitingan<br>
+                            • April 17-19 - Maundy Thursday to Black Saturday<br>
+                            • May 1 - Labor Day<br>
+                            • June 12 - Independence Day<br>
+                            • Aug 25 - Ninoy Aquino Day<br>
+                            • Nov 1 - All Saints' Day<br>
+                            • Nov 30 - Bonifacio Day<br>
+                            • Dec 25 - Christmas<br>
+                            • Dec 30 - Rizal Day
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Termination & Separation</h3>
+
+                        <div class="alert">
+                            <strong>⚠️ You CANNOT Just Fire Someone in PH!</strong><br>
+                            The Philippines has strong employee protections. Illegal termination = reinstatement + backwages + damages (can cost ₱500K-2M+)
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">Legal Grounds for Termination</div>
+                            <strong>Just Causes (Serious Misconduct):</strong><br>
+                            • Theft, fraud, dishonesty<br>
+                            • Serious misconduct<br>
+                            • Willful disobedience<br>
+                            • Gross neglect of duty<br>
+                            • Loss of trust (for positions with fiduciary role)<br>
+                            • Crime against employer/family<br>
+                            <br>
+                            <strong>Process Required:</strong><br>
+                            1. Written notice specifying cause<br>
+                            2. Hearing/opportunity to explain<br>
+                            3. Written notice of decision<br>
+                            <br>
+                            <strong>Separation Pay:</strong> NONE (for just cause)
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">Authorized Causes (Business Reasons)</div>
+                            • Redundancy<br>
+                            • Retrenchment (to prevent losses)<br>
+                            • Closure of business<br>
+                            • Disease (if continued employment is risky)<br>
+                            <br>
+                            <strong>Requirements:</strong><br>
+                            • 30-day written notice to employee & DOLE<br>
+                            • Separation pay required<br>
+                            <br>
+                            <strong>Separation Pay:</strong><br>
+                            • 1 month salary OR<br>
+                            • ½ month pay per year of service<br>
+                            • Whichever is HIGHER
+                        </div>
+
+                        <div class="success">
+                            <strong>✅ Best Practice: Probation Period Strategy</strong><br>
+                            • Set 6-month probation (standard)<br>
+                            • Give clear performance standards in writing<br>
+                            • Evaluate at 3 months, 5 months<br>
+                            • If not meeting standards, end before 6 months<br>
+                            • After 6 months = regular = very hard to terminate<br>
+                            <br>
+                            <strong>During probation:</strong> Can end employment with 30-day notice, no separation pay needed
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Where to Find Employees</h3>
+
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-title">💼 Online Platforms</div>
+                                <strong>JobStreet</strong> - Most popular, white collar<br>
+                                <strong>Indeed</strong> - Wide range of positions<br>
+                                <strong>LinkedIn</strong> - Professional, higher level<br>
+                                <strong>Facebook Jobs</strong> - FREE, local hiring<br>
+                                <strong>OnlineJobs.ph</strong> - Remote/VA workers<br>
+                                <br>
+                                <strong>Cost:</strong> ₱0-5,000/posting
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">🎓 Schools & Agencies</div>
+                                <strong>PESO (Public Employment Service)</strong> - FREE gov't service<br>
+                                <strong>University Career Centers</strong> - Fresh grads<br>
+                                <strong>TESDA</strong> - Skilled workers<br>
+                                <strong>Manpower Agencies</strong> - Fast hiring<br>
+                                <br>
+                                <strong>Cost:</strong> ₱0-10% annual salary
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">📢 Referrals</div>
+                                <strong>Employee Referral Program</strong><br>
+                                • Best quality hires<br>
+                                • Offer ₱3K-10K referral bonus<br>
+                                • Current employee vouches<br>
+                                <br>
+                                <strong>Success Rate:</strong> 40%+ (vs 10-15% job boards)
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">📱 Social Media</div>
+                                <strong>Facebook Groups</strong><br>
+                                • "Job Hiring Philippines"<br>
+                                • Local city job groups<br>
+                                • Industry-specific groups<br>
+                                <br>
+                                <strong>Your Business Page</strong> - Post openings, FREE
+                            </div>
+                        </div>
+
+                        <div class="highlight">
+                            <strong>🎯 Hiring Process Checklist:</strong><br>
+                            <strong>Before Hiring:</strong><br>
+                            ☐ Job description written<br>
+                            ☐ Salary range determined<br>
+                            ☐ Budget includes benefits (add 25%)<br>
+                            <br>
+                            <strong>During Hiring:</strong><br>
+                            ☐ Background check (NBI clearance)<br>
+                            ☐ Skills test/trial task<br>
+                            ☐ Reference check (at least 2)<br>
+                            ☐ Clear on probation period & KPIs<br>
+                            <br>
+                            <strong>First Day:</strong><br>
+                            ☐ Employment contract signed<br>
+                            ☐ SSS/PhilHealth/Pag-IBIG enrollment<br>
+                            ☐ Company handbook provided<br>
+                            ☐ Orientation completed<br>
+                            ☐ Equipment provided
+                        </div>
+
+                        <div class="info">
+                            <strong>💡 Pro Tip:</strong> Start with a Virtual Assistant (VA) or part-timer to test the role. If workload justifies it after 3-6 months, convert to full-time. This reduces risk of bad hires.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continuing in next section... -->
+            <!-- NEW SECTION 12: E-Commerce Complete Guide -->
+            <div class="section">
+                <div class="section-header">
+                    <span>🛒 E-Commerce Complete Guide 2026</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #ce1126; margin-bottom: 8px;">Choosing Your E-Commerce Platform</h3>
+
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-title">🏪 Marketplace Model</div>
+                                <span class="badge-success badge">EASIEST START</span><br>
+                                <strong>Platforms:</strong> Lazada, Shopee, TikTok Shop<br>
+                                <strong>Pros:</strong><br>
+                                • FREE to start<br>
+                                • Built-in traffic<br>
+                                • Trust from buyers<br>
+                                • Logistics handled<br>
+                                <br>
+                                <strong>Cons:</strong><br>
+                                • 2-5% commission + 2% payment<br>
+                                • High competition<br>
+                                • No customer data<br>
+                                • Platform controls your shop<br>
+                                <br>
+                                <strong>Best for:</strong> Testing products, beginners
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">🌐 Own Website</div>
+                                <span class="badge-info badge">FULL CONTROL</span><br>
+                                <strong>Platforms:</strong> Shopify, WooCommerce<br>
+                                <strong>Pros:</strong><br>
+                                • Own customer data<br>
+                                • Brand building<br>
+                                • No commissions<br>
+                                • Full control<br>
+                                <br>
+                                <strong>Cons:</strong><br>
+                                • Monthly fee (₱1,500-3,000)<br>
+                                • Need to drive own traffic<br>
+                                • Handle logistics yourself<br>
+                                <br>
+                                <strong>Best for:</strong> Established brands, higher margins
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">📱 Social Commerce</div>
+                                <span class="badge-warning badge">TRENDING</span><br>
+                                <strong>Platforms:</strong> FB/IG Shopping, TikTok<br>
+                                <strong>Pros:</strong><br>
+                                • Shop where customers are<br>
+                                • Seamless checkout<br>
+                                • Lower fees than marketplaces<br>
+                                <br>
+                                <strong>Cons:</strong><br>
+                                • Still building trust<br>
+                                • Limited to platform<br>
+                                <br>
+                                <strong>Best for:</strong> Visual products, younger audience
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title">🔄 Omnichannel</div>
+                                <span class="badge badge">ADVANCED</span><br>
+                                <strong>Strategy:</strong> ALL channels<br>
+                                • Marketplace for volume<br>
+                                • Own site for brand<br>
+                                • Social for engagement<br>
+                                <br>
+                                <strong>Tools:</strong> Inventory management system<br>
+                                <br>
+                                <strong>Best for:</strong> Scaling beyond ₱500K/month
+                            </div>
+                        </div>
+
+                        <div class="success">
+                            <strong>✅ Recommended Progression:</strong><br>
+                            <strong>Months 1-3:</strong> Start on Lazada/Shopee (test market)<br>
+                            <strong>Months 4-6:</strong> Add TikTok Shop + Facebook Shop<br>
+                            <strong>Months 7-12:</strong> Build own Shopify store<br>
+                            <strong>Year 2+:</strong> Full omnichannel with synced inventory
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Lazada Seller Guide</h3>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">Lazada Setup (₱0 to start)</div>
+                            <strong>Requirements:</strong><br>
+                            • DTI/SEC registration<br>
+                            • Valid ID<br>
+                            • Bank account (for payouts)<br>
+                            • Product photos (white background preferred)<br>
+                            <br>
+                            <strong>Fees:</strong><br>
+                            • Commission: 1-5% (varies by category)<br>
+                            • Payment fee: 2%<br>
+                            • Shipping: Borne by buyer (you can subsidize)<br>
+                            <br>
+                            <strong>Payout:</strong> Every 2 weeks to bank account
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">🏆 Winning on Lazada</div>
+                            <strong>1. Product Listing Optimization</strong><br>
+                            • Title: Include keywords buyers search<br>
+                            • Example: "Women's Running Shoes Size 36-40 Breathable Lightweight Pink White Black"<br>
+                            • 7-9 photos minimum (different angles, lifestyle shots)<br>
+                            • Detailed description with specifications<br>
+                            • Competitive pricing (check 10 competitors)<br>
+                            <br>
+                            <strong>2. Get Initial Reviews</strong><br>
+                            • Offer friends/family 50% off for honest review<br>
+                            • Include thank you card asking for review<br>
+                            • Respond to ALL reviews (good & bad)<br>
+                            • Goal: 20+ reviews with 4.5+ stars<br>
+                            <br>
+                            <strong>3. Participate in Campaigns</strong><br>
+                            • Flash Sales (traffic boost)<br>
+                            • Mega Campaigns (11.11, 12.12)<br>
+                            • LazMall (if qualified - builds trust)<br>
+                            • Free Shipping campaigns<br>
+                            <br>
+                            <strong>4. Customer Service</strong><br>
+                            • Respond to chats within 15 minutes<br>
+                            • Ship same/next day<br>
+                            • Quality packaging<br>
+                            • Handle issues immediately
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Shopee Seller Guide</h3>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">🔸 Shopee vs Lazada Differences</div>
+                            <strong>Shopee Strengths:</strong><br>
+                            • Lower prices, more budget-conscious buyers<br>
+                            • Better for items < ₱1,000<br>
+                            • Gamification (coins, vouchers) drives sales<br>
+                            • Free shipping more common<br>
+                            <br>
+                            <strong>Lazada Strengths:</strong><br>
+                            • Higher-income buyers<br>
+                            • Better for electronics, appliances, premium items<br>
+                            • Less price-sensitive<br>
+                            <br>
+                            <strong>Pro Tip:</strong> Sell same product on BOTH, but:<br>
+                            • Shopee: Bundle deals, lower prices<br>
+                            • Lazada: Premium positioning, better packaging
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">Shopee Success Tactics</div>
+                            <strong>1. Join Shopee Live</strong><br>
+                            • Live stream your products (FREE traffic!)<br>
+                            • Show products in use<br>
+                            • Offer exclusive live discounts<br>
+                            • Schedule: Peak hours 8-10pm<br>
+                            <br>
+                            <strong>2. Use Shopee Ads</strong><br>
+                            • Product Ads: ₱50/day minimum<br>
+                            • Shop Ads: ₱100/day minimum<br>
+                            • Only pay when clicked<br>
+                            • Start small, scale what works<br>
+                            <br>
+                            <strong>3. Optimize for Shopee Algorithm</strong><br>
+                            • Complete shop info 100%<br>
+                            • Ship within 24 hours<br>
+                            • Maintain 4.8+ star rating<br>
+                            • High chat response rate (90%+)<br>
+                            • Low order cancellation/return rate
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">TikTok Shop Strategy</h3>
+
+                        <div class="info">
+                            <strong>🚀 Why TikTok Shop is EXPLODING in 2026:</strong><br>
+                            • Entertainment + shopping = impulse buys<br>
+                            • Viral potential (1 video = ₱100K+ sales)<br>
+                            • Younger audience (18-35) with spending power<br>
+                            • Lower competition (still early!)<br>
+                            • 0% commission (limited time promo - verify current rate)
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">📹 TikTok Shop Content Strategy</div>
+                            <strong>Video Types That Sell:</strong><br>
+                            <br>
+                            <strong>1. Before/After Transformations</strong><br>
+                            • Skincare results<br>
+                            • Home organization<br>
+                            • Fashion styling<br>
+                            <br>
+                            <strong>2. Problem → Solution</strong><br>
+                            • Show problem (messy cables, wrinkled clothes)<br>
+                            • Show your product solving it<br>
+                            • "Life hack" angle<br>
+                            <br>
+                            <strong>3. Unboxing & Reviews</strong><br>
+                            • Real customer reactions<br>
+                            • Detailed product showcase<br>
+                            • Honest pros & cons (builds trust)<br>
+                            <br>
+                            <strong>4. Trending Sounds + Product</strong><br>
+                            • Use trending audio<br>
+                            • Creative product integration<br>
+                            • "Duet" popular videos with your product<br>
+                            <br>
+                            <strong>Posting Schedule:</strong><br>
+                            • 2-5 videos/day<br>
+                            • Test different times<br>
+                            • Double down on winners
+                        </div>
+
+                        <div class="highlight">
+                            <strong>💰 TikTok Shop Affiliate Strategy:</strong><br>
+                            • Set commission rate (10-30%)<br>
+                            • Recruit TikTok creators to promote<br>
+                            • They make content, you fulfill orders<br>
+                            • Win-win: They earn commission, you get sales<br>
+                            <br>
+                            <strong>How to find affiliates:</strong><br>
+                            • Search niche hashtags<br>
+                            • DM creators with 5K-100K followers<br>
+                            • Send free product for review<br>
+                            • Offer exclusive promo code
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Logistics & Fulfillment</h3>
+
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Courier</th>
+                                    <th>Metro Manila</th>
+                                    <th>Provincial</th>
+                                    <th>Notes</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>J&T Express</strong></td>
+                                    <td>₱45-60</td>
+                                    <td>₱70-120</td>
+                                    <td>Cheapest, most popular</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ninjavan</strong></td>
+                                    <td>₱50-65</td>
+                                    <td>₱75-130</td>
+                                    <td>Good tech, real-time tracking</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>LBC</strong></td>
+                                    <td>₱60-80</td>
+                                    <td>₱90-150</td>
+                                    <td>Most reliable, slower</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Flash Express</strong></td>
+                                    <td>₱40-55</td>
+                                    <td>₱65-110</td>
+                                    <td>Budget option</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Grab/Lalamove</strong></td>
+                                    <td>₱100-300</td>
+                                    <td>N/A</td>
+                                    <td>Same-day delivery</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="success">
+                            <strong>✅ Shipping Best Practices:</strong><br>
+                            <strong>1. Packaging:</strong><br>
+                            • Double-box fragile items<br>
+                            • Bubble wrap liberally<br>
+                            • Include thank you card + social media<br>
+                            • Branded packaging (even just sticker) = professional<br>
+                            <br>
+                            <strong>2. Speed:</strong><br>
+                            • Process orders same day if before 2pm<br>
+                            • Batch pickup (courier picks up daily)<br>
+                            • Have packaging ready in advance<br>
+                            <br>
+                            <strong>3. Tracking:</strong><br>
+                            • Share tracking number immediately<br>
+                            • Update customer proactively<br>
+                            • Follow up after delivery
+                        </div>
+
+                        <div class="alert">
+                            <strong>⚠️ Handling Returns/Refunds:</strong><br>
+                            <strong>Common Issues:</strong><br>
+                            • Wrong item sent<br>
+                            • Damaged in shipping<br>
+                            • Didn't meet expectations<br>
+                            <br>
+                            <strong>Your Policy Should:</strong><br>
+                            • 7-day return for defects<br>
+                            • Customer pays return shipping (unless your error)<br>
+                            • Inspect returned item before refund<br>
+                            • Respond within 24 hours<br>
+                            <br>
+                            <strong>Pro Tip:</strong> Resolve issues FAST. Cost of refund < cost of bad review
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Inventory Management</h3>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">📦 Inventory Strategy by Stage</div>
+                            <strong>Stage 1: Testing (₱10K-50K capital)</strong><br>
+                            • Order minimum quantity (50-100 units)<br>
+                            • 2-3 products maximum<br>
+                            • Simple spreadsheet tracking<br>
+                            • Reorder when 20% remaining<br>
+                            <br>
+                            <strong>Stage 2: Growing (₱100K-500K capital)</strong><br>
+                            • 5-10 bestsellers<br>
+                            • Use inventory app (Shopify, Ordoro)<br>
+                            • ABC analysis (focus on top 20%)<br>
+                            • Safety stock: 2-4 weeks supply<br>
+                            <br>
+                            <strong>Stage 3: Scaling (₱1M+ capital)</strong><br>
+                            • 20-50 SKUs<br>
+                            • Automated reordering<br>
+                            • Multiple warehouses<br>
+                            • 3PL (third-party logistics) consideration
+                        </div>
+
+                        <div class="formula" style="margin: 10px 0;">
+                            <strong>Economic Order Quantity (EOQ):</strong><br>
+                            EOQ = √[(2 × Annual Demand × Order Cost) ÷ Holding Cost]<br>
+                            <br>
+                            <strong>Simple Version for PH SMEs:</strong><br>
+                            Order when inventory drops to 1-month supply<br>
+                            Order quantity = 3-6 months of average sales
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">Customer Service Excellence</h3>
+
+                        <div class="highlight">
+                            <strong>🎯 Response Time Targets:</strong><br>
+                            • Chat inquiries: < 15 minutes<br>
+                            • Email: < 4 hours<br>
+                            • Comments/reviews: < 24 hours<br>
+                            • Complaints: < 1 hour (immediate priority)<br>
+                            <br>
+                            <strong>Why it matters:</strong><br>
+                            • 70% of Filipino online shoppers check seller response time<br>
+                            • Fast response = higher conversion (30%+ lift)<br>
+                            • Slow response = abandoned cart
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">💬 Template Messages (Taglish for PH market)</div>
+                            <strong>Order Confirmation:</strong><br>
+                            "Hi! Thank you sa order mo! 🎉 Your order #[ORDER] is confirmed and will ship today. Tracking number to follow. May questions ka ba?"<br>
+                            <br>
+                            <strong>Shipped:</strong><br>
+                            "Good news! Your order is on the way! 🚚 Tracking: [LINK]. Expect delivery in 3-5 days. Thank you ulit!"<br>
+                            <br>
+                            <strong>Handling Complaint:</strong><br>
+                            "We're so sorry to hear this 😔. We'll fix this right away. Can you send us a photo? We'll [solution] immediately. Thank you for your patience!"<br>
+                            <br>
+                            <strong>After Delivery:</strong><br>
+                            "Hi! Nareceive mo na ba yung order? How was it? We'd love to hear your feedback! 💙"
+                        </div>
+
+                        <div class="success">
+                            <strong>🏆 E-Commerce Success Checklist:</strong><br>
+                            <strong>Product Research:</strong><br>
+                            ☐ High demand (check Google Trends, Lazada bestsellers)<br>
+                            ☐ Profit margin >40% after fees<br>
+                            ☐ Not easily damaged in shipping<br>
+                            ☐ Unique value proposition<br>
+                            <br>
+                            <strong>Launch:</strong><br>
+                            ☐ Professional product photos<br>
+                            ☐ Keyword-optimized listings<br>
+                            ☐ Competitive pricing<br>
+                            ☐ Initial reviews (10+ with 4.5+ stars)<br>
+                            <br>
+                            <strong>Operations:</strong><br>
+                            ☐ Inventory system<br>
+                            ☐ Reliable courier partner<br>
+                            ☐ Fast response system<br>
+                            ☐ Quality packaging materials<br>
+                            <br>
+                            <strong>Growth:</strong><br>
+                            ☐ Run campaigns during sale events<br>
+                            ☐ Collect customer emails<br>
+                            ☐ Ask for reviews/referrals<br>
+                            ☐ Expand to new platforms
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW SECTION 13: Industry-Specific Guides -->
+            <div class="section">
+                <div class="section-header">
+                    <span>🏭 Industry-Specific Deep Dives</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #ce1126; margin-bottom: 8px;">🍔 Food & Beverage Business</h3>
+
+                        <div class="alert">
+                            <strong>⚠️ F&B Reality Check:</strong><br>
+                            • 60% of PH food businesses fail in year 1<br>
+                            • Main reasons: Underpriced menu, bad location, poor food cost control<br>
+                            • Success rate: Niche concepts > generic carinderias
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">Required Permits (Beyond Standard Business)</div>
+                            <strong>1. FDA License to Operate (LTO)</strong><br>
+                            • Application fee: ₱15,000-30,000<br>
+                            • Renewal: Annual<br>
+                            • Requirements: Kitchen inspection, water testing<br>
+                            • Timeline: 30-60 days<br>
+                            <br>
+                            <strong>2. Sanitary Permit</strong><br>
+                            • From City Health Office<br>
+                            • Fee: ₱500-2,000<br>
+                            • Medical exam for food handlers required<br>
+                            • Renewal: Annual<br>
+                            <br>
+                            <strong>3. Fire Safety Inspection Certificate</strong><br>
+                            • From Bureau of Fire Protection<br>
+                            • Fee: ₱500-3,000<br>
+                            • Fire extinguishers required<br>
+                            <br>
+                            <strong>4. Environmental Compliance Certificate (ECC)</strong><br>
+                            • If operating waste, grease traps<br>
+                            • From DENR<br>
+                            • Fee: ₱5,000-20,000
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">💰 Food Costing Formula</div>
+                            <strong>Target Food Cost: 28-35% (industry standard)</strong><br>
+                            <br>
+                            <div class="formula">
+                                Menu Price = (Ingredient Cost ÷ Target Food Cost %) × 1.12 (VAT)
+                            </div>
+                            <br>
+                            <strong>Example: Chicken Adobo Bowl</strong><br>
+                            • Chicken: ₱25<br>
+                            • Rice: ₱8<br>
+                            • Vegetables: ₱10<br>
+                            • Sauce & spices: ₱7<br>
+                            • Packaging: ₱5<br>
+                            <strong>Total ingredient cost: ₱55</strong><br>
+                            <br>
+                            Target food cost: 30%<br>
+                            ₱55 ÷ 0.30 = ₱183 × 1.12 = ₱205<br>
+                            <span class="badge-success badge">Sell at ₱199-209</span><br>
+                            <br>
+                            <strong>Breakdown:</strong><br>
+                            • Food cost: ₱55 (30%)<br>
+                            • Labor: ₱55-65 (30-35%)<br>
+                            • Rent & utilities: ₱35-45 (20%)<br>
+                            • Profit: ₱20-30 (10-15%)
+                        </div>
+
+                        <div class="success">
+                            <strong>✅ High-Margin F&B Concepts (2026):</strong><br>
+                            <strong>1. Specialty Coffee Cart</strong> - 70% margins<br>
+                            <strong>2. Korean Corn Dogs</strong> - 65% margins<br>
+                            <strong>3. Milk Tea / Smoothie Bowls</strong> - 60-70% margins<br>
+                            <strong>4. Cloud Kitchen (Delivery Only)</strong> - 40-50% margins<br>
+                            <strong>5. Healthy Meal Prep</strong> - 45-55% margins
+                        </div>
+
+                        <div class="highlight">
+                            <strong>🎯 F&B Success Tips:</strong><br>
+                            • Menu: 8-12 items max (easier inventory, faster service)<br>
+                            • Signature dish: 1-2 items you're KNOWN for<br>
+                            • Location: Foot traffic > cheap rent<br>
+                            • Suppliers: Build relationships, negotiate terms<br>
+                            • Portion control: Use exact measurements<br>
+                            • Pricing: Review quarterly, adjust for inflation<br>
+                            • Marketing: Instagram-worthy presentation
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">💻 Tech/SaaS Startups</h3>
+
+                        <div class="info">
+                            <strong>📊 PH Tech Landscape 2026:</strong><br>
+                            • ₱180B+ SaaS market<br>
+                            • Government digitalization = opportunities<br>
+                            • DOST-SETUP grants up to ₱10M<br>
+                            • Focus: Fintech, Edtech, Agritech, Healthtech
+                        </div>
+
+                        <div class="step" style="margin-bottom: 10px;">
+                            <div class="step-number">MVP Development Path</div>
+                            <strong>Option 1: No-Code Tools (₱10K-50K)</strong><br>
+                            • Bubble.io - Web apps<br>
+                            • Adalo - Mobile apps<br>
+                            • Webflow - Websites<br>
+                            • Airtable - Databases<br>
+                            <strong>Timeline:</strong> 2-8 weeks<br>
+                            <strong>Best for:</strong> Validating concept fast<br>
+                            <br>
+                            <strong>Option 2: Hire Filipino Devs (₱200K-800K)</strong><br>
+                            • OnlineJobs.ph, Upwork<br>
+                            • Junior dev: ₱25K-40K/month<br>
+                            • Senior dev: ₱60K-120K/month<br>
+                            <strong>Timeline:</strong> 3-6 months<br>
+                            <strong>Best for:</strong> Custom features, scaling<br>
+                            <br>
+                            <strong>Option 3: Dev Agency (₱500K-3M)</strong><br>
+                            • Full-service development<br>
+                            • Managed project<br>
+                            • Quality assurance<br>
+                            <strong>Timeline:</strong> 4-8 months<br>
+                            <strong>Best for:</strong> Complex apps, funded startups
+                        </div>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">💰 SaaS Pricing Models</div>
+                            <strong>1. Freemium</strong><br>
+                            • Free basic version<br>
+                            • Paid for premium features<br>
+                            • Example: Canva, Notion<br>
+                            • Conversion rate: 2-5%<br>
+                            <br>
+                            <strong>2. Tiered Subscription</strong><br>
+                            • Basic: ₱299/month<br>
+                            • Pro: ₱799/month<br>
+                            • Enterprise: ₱2,499/month<br>
+                            • Most choose middle tier (psychology)<br>
+                            <br>
+                            <strong>3. Usage-Based</strong><br>
+                            • Pay per transaction, user, or feature<br>
+                            • Example: SMS APIs, payment processors<br>
+                            • Scales with customer growth<br>
+                            <br>
+                            <strong>4. Annual Prepay (Discount)</strong><br>
+                            • Offer 2-3 months free if pay annually<br>
+                            • Improves cash flow<br>
+                            • Reduces churn
+                        </div>
+
+                        <div class="success">
+                            <strong>✅ Tech Startup Validation Checklist:</strong><br>
+                            ☐ Problem: Clearly defined pain point<br>
+                            ☐ Market: 10,000+ potential customers in PH<br>
+                            ☐ Willingness to pay: Surveyed 50+ users<br>
+                            ☐ Competition: Know top 3 competitors<br>
+                            ☐ MVP: Can build in < 3 months<br>
+                            ☐ Unit economics: LTV > 3× CAC<br>
+                            ☐ Traction: 100+ signups/early users
+                        </div>
+
+                        <h3 style="color: #ce1126; margin: 16px 0 8px 0;">🏪 Retail Store Business</h3>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">📍 Location Analysis Framework</div>
+                            <strong>Foot Traffic Test:</strong><br>
+                            • Count passersby for 3 hours (morning, lunch, evening)<br>
+                            • Multiply by 8 (operating hours) × 26 (days/month)<br>
+                            • Conversion rate: 2-5% of foot traffic<br>
+                            • Average transaction: ₱200-500<br>
+                            <br>
+                            <strong>Example:</strong><br>
+                            • 100 people/hour × 8 hours = 800/day<br>
+                            • × 26 days = 20,800/month<br>
+                            • × 3% conversion = 624 transactions<br>
+                            • × ₱350 average = <strong>₱218,400 potential revenue</strong><br>
+                            <br>
+                            <strong>Can you afford rent?</strong><br>
+                            Target: Rent < 10% of revenue<br>
+                            Max rent for above: ₱21,840/month
+                        </div>
+
+                        <div class="highlight">
+                            <strong>💡 Retail Success Factors:</strong><br>
+                            <strong>1. Location (50% of success)</strong><br>
+                            • High foot traffic beats low rent<br>
+                            • Anchor tenants (malls, big stores) bring traffic<br>
+                            • Parking availability (if target has cars)<br>
+                            <br>
+                            <strong>2. Visual Merchandising</strong><br>
+                            • Window display: 5-second rule (grab attention)<br>
+                            • Eye-level = buy level (prime product placement)<br>
+                            • Group by use case, not category<br>
+                            • Update displays weekly<br>
+                            <br>
+                            <strong>3. Inventory Turnover</strong><br>
+                            • Target: 6-8× per year (sell entire stock 6-8 times)<br>
+                            • Fast-moving: Restock weekly<br>
+                            • Slow-moving: Discount after 90 days<br>
+                            • Dead stock: Clearance sale, donate, or write off<br>
+                            <br>
+                            <strong>4. Customer Experience</strong><br>
+                            • Greeting within 30 seconds<br>
+                            • Music, scent, lighting (ambiance)<br>
+                            • Easy navigation<br>
+                            • Multiple payment options
+                        </div>
+
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Retail Type</th>
+                                    <th>Typical Margin</th>
+                                    <th>Inventory Turnover</th>
+                                    <th>Success Keys</th>
+                                </tr>
+                                <tr>
+                                    <td>Fashion/Clothing</td>
+                                    <td>50-100%</td>
+                                    <td>4-6×/year</td>
+                                    <td>Trends, curation</td>
+                                </tr>
+                                <tr>
+                                    <td>Electronics</td>
+                                    <td>10-25%</td>
+                                    <td>8-12×/year</td>
+                                    <td>Volume, service</td>
+                                </tr>
+                                <tr>
+                                    <td>Beauty/Cosmetics</td>
+                                    <td>40-60%</td>
+                                    <td>6-10×/year</td>
+                                    <td>Expertise, testers</td>
+                                </tr>
+                                <tr>
+                                    <td>Convenience Store</td>
+                                    <td>20-30%</td>
+                                    <td>15-20×/year</td>
+                                    <td>Location, hours</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">🛠️ Service Business</h3>
+
+                        <div class="card" style="margin: 10px 0;">
+                            <div class="card-title">💼 Service Pricing Strategy</div>
+                            <strong>Hourly vs Project vs Retainer:</strong><br>
+                            <br>
+                            <strong>Hourly Pricing</strong><br>
+                            • Formula: (Desired annual income + overhead) ÷ billable hours<br>
+                            • Example: ₱720K/year ÷ 1,000 hours = ₱720/hour<br>
+                            • Pros: Simple, fair for variable work<br>
+                            • Cons: Penalizes efficiency, income capped<br>
+                            <br>
+                            <strong>Project Pricing</strong><br>
+                            • Estimate hours × rate × 1.5 (complexity buffer)<br>
+                            • Example: 10 hours × ₱720 × 1.5 = ₱10,800<br>
+                            • Pros: Predictable for client, rewards speed<br>
+                            • Cons: Risky if scope creeps<br>
+                            <br>
+                            <strong>Retainer Model (BEST)</strong><br>
+                            • Monthly fee for ongoing services<br>
+                            • Example: ₱15K-50K/month for social media management<br>
+                            • Pros: Predictable income, client retention<br>
+                            • Cons: Must deliver consistent value
+                        </div>
+
+                        <div class="success">
+                            <strong>✅ Service Business Scaling Path:</strong><br>
+                            <strong>Solo (₱30K-100K/month):</strong><br>
+                            • You do all the work<br>
+                            • Limited by your hours<br>
+                            • Max 3-5 clients<br>
+                            <br>
+                            <strong>Team (₱100K-500K/month):</strong><br>
+                            • Hire 1-3 contractors/employees<br>
+                            • You manage, they execute<br>
+                            • 10-20 clients<br>
+                            <br>
+                            <strong>Agency (₱500K-3M/month):</strong><br>
+                            • 5-15 team members<br>
+                            • Project managers lead teams<br>
+                            • 30-100 clients<br>
+                            • Systemized processes<br>
+                            <br>
+                            <strong>Hybrid (₱200K-1M/month):</strong><br>
+                            • Service + digital products (courses, templates)<br>
+                            • Leverage expertise into scalable income<br>
+                            • Example: Consulting + online course
+                        </div>
+
+                        <div class="highlight">
+                            <strong>🎯 High-Demand Services in PH (2026):</strong><br>
+                            • Digital marketing / Social media management<br>
+                            • Web/app development<br>
+                            • Accounting / bookkeeping<br>
+                            • Graphic design / Video editing<br>
+                            • Virtual assistant services<br>
+                            • IT support / Cybersecurity<br>
+                            • Business consulting<br>
+                            • HR / Recruitment services<br>
+                            • Legal services / Compliance<br>
+                            • Home cleaning / maintenance
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 14: Action Plan -->
+            <div class="section active">
+                <div class="section-header">
+                    <span>🚀 Your 90-Day Action Plan</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <div class="section-body">
+                        <h3 style="color: #0038a8; margin-bottom: 8px;">Days 1-30: Ideation & Validation</h3>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <strong>Week 1:</strong> Identify 10 business ideas based on skills, interests, market gaps
+                            </div>
+                            <div class="timeline-item">
+                                <strong>Week 2:</strong> Narrow to top 3, research competition, calculate startup costs
+                            </div>
+                            <div class="timeline-item">
+                                <strong>Week 3:</strong> Survey 50-100 potential customers, validate pricing
+                            </div>
+                            <div class="timeline-item">
+                                <strong>Week 4:</strong> Choose ONE business, create simple business plan (1-2 pages)
+                            </div>
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Days 31-60: Setup & Launch</h3>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <strong>Week 5:</strong> Register business (DTI/SEC), open business bank account
+                            </div>
+                            <div class="timeline-item">
+                                <strong>Week 6:</strong> Complete permits (Barangay, Mayor's, BIR), set up accounting system
+                            </div>
+                            <div class="timeline-item">
+                                <strong>Week 7:</strong> Build MVP, create social media presence, prepare marketing materials
+                            </div>
+                            <div class="timeline-item">
+                                <strong>Week 8:</strong> Soft launch to friends/family, collect feedback, refine offering
+                            </div>
+                        </div>
+
+                        <h3 style="color: #0038a8; margin: 16px 0 8px 0;">Days 61-90: Growth & Iteration</h3>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <strong>Week 9:</strong> Official launch, run paid ads (₱3K-10K budget), PR outreach
+                            </div>
+                            <div class="timeline-item">
+                                <strong>Week 10:</strong> Serve first 10-20 customers, gather testimonials, refine processes
+                            </div>
+                            <div class="timeline-item">
+                                <strong>Week 11:</strong> Analyze results, double down on what works, cut what doesn't
+                            </div>
+                            <div class="timeline-item">
+                                <strong>Week 12:</strong> Create SOPs, plan next 90 days, consider hiring first employee/VA
+                            </div>
+                        </div>
+
+                        <div class="success">
+                            <strong>🎯 90-Day Success Metrics:</strong><br>
+                            • Registered business entity ✓<br>
+                            • First 10 paying customers ✓<br>
+                            • ₱50K-200K in revenue (target) ✓<br>
+                            • Basic systems documented ✓<br>
+                            • Proven market demand ✓<br>
+                            <br>
+                            <strong>If you hit these, you're ready for Business #2 in 6-12 months!</strong>
+                        </div>
+
+                        <div class="highlight" style="text-align: center; padding: 20px;">
+                            <h2 style="color: #ce1126; margin-bottom: 12px;">🇵🇭 Mabuhay, Future Serial Entrepreneur!</h2>
+                            <p style="font-size: 1rem; line-height: 1.8;">
+                                The Philippines is experiencing its golden age for entrepreneurship. With 110M+ population, rising middle class, digital transformation, and supportive government programs, there's never been a better time to start.
+                            </p>
+                            <p style="font-size: 1rem; margin-top: 12px; font-weight: 600;">
+                                Don't wait for perfect conditions. Start small, learn fast, scale smart. Your first business won't be your last—it's just the beginning of your serial entrepreneur journey.
+                            </p>
+                            <p style="font-size: 1.1rem; margin-top: 16px; color: #0038a8; font-weight: 700;">
+                                Kaya mo 'yan! 🚀
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <strong>2026 Philippines Serial Entrepreneur Beginners Guide - COMPLETE EDITION</strong><br>
+            Updated: February 2026 | For educational purposes | Consult professionals for specific legal/financial advice<br>
+            <small>Includes: Digital Marketing • Financial Management • Hiring & Labor Laws • E-Commerce • Industry Guides</small><br>
+            <small>Data sources: DTI, SEC, BIR, PSA, DOLE, industry reports</small>
+        </footer>
+    </div>
+
+    <div class="btn-top" id="btnTop">↑</div>
+
+    <script>
+        // Toggle sections
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const section = this.parentElement;
+                const wasActive = section.classList.contains('active');
+                
+                // Close all sections
+                document.querySelectorAll('.section').forEach(s => {
+                    s.classList.remove('active');
+                });
+                
+                // Open clicked section if it wasn't active
+                if (!wasActive) {
+                    section.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll to top button
+        const btnTop = document.getElementById('btnTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                btnTop.classList.add('visible');
+            } else {
+                btnTop.classList.remove('visible');
+            }
+        });
+
+        btnTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Prevent text selection on rapid taps (mobile)
+        let lastTap = 0;
+        document.addEventListener('touchend', function(e) {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTap;
+            if (tapLength < 500 && tapLength > 0) {
+                e.preventDefault();
+            }
+            lastTap = currentTime;
+        });
+    </script>
+</body>
+</html>
